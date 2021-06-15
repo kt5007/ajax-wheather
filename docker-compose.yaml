@@ -1,0 +1,10 @@
+version: '3'
+services:
+  php:
+    build: .
+    volumes:
+      - ./html:/var/www/html
+    ports:
+      - 8085:80
+    depends_on:
+      - db
